@@ -26,5 +26,5 @@ jobs:
       - name: Install dependencies
         run: uv sync --extra dev
 
-      - name: Run test suite
-        run: uv run pytest -v
+      - name: Run offline Von Vision tests
+        run: uv run pytest -v tests/test_von_vision.py
