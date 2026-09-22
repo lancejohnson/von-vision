@@ -79,6 +79,21 @@ von-vision balcony.jpg terrace.jpg \
   --aggregation mean
 ```
 
+## Real-image demo
+
+Download six openly licensed Wikimedia Commons images (water, mountains, skyline,
+forest, bedroom, and parking lot), then score them with the default SigLIP2 model:
+
+```bash
+uv run --extra vision python examples/download_demo_images.py
+uv run --extra vision python examples/score_demo_images.py
+```
+
+The downloader writes the images and a source/license manifest under the ignored
+`data/demo-images/` directory. The scoring script tests dynamic view classification
+and an ordered scenic-view-quality score without using filenames or descriptions as
+model input.
+
 ## Scope
 
 This project does not fetch image URLs, decode video, train a model, perform visual
